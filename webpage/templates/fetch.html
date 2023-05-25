@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ethereum Balance and Transactions</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ethereum Balance and Transactions</h1>
+        <h3>Balance: {{ balance }}</h3>
+        <h3>Recent Transactions:</h3>
+        <ul class="list-group">
+            {% for transaction in transactions %}
+            <li class="list-group-item">
+                <strong>From:</strong> {{ transaction.from }}
+                <br>
+                <strong>To:</strong> {{ transaction.to }}
+                <br>
+                <strong>Value:</strong> {{ transaction.value }}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

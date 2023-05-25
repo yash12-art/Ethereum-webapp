@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ethereum Balance Fetcher</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ethereum Balance Fetcher</h1>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="ethereum_address">Ethereum Address:</label>
+                <input type="text" class="form-control" id="ethereum_address" name="ethereum_address" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Fetch</button>
+        </form>
+    </div>
+</body>
+</html>
